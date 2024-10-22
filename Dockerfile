@@ -7,6 +7,12 @@ WORKDIR /app
 # Install Jupyter Notebook
 RUN pip install --no-cache-dir notebook
 
+# Generate Jupyter configuration file
+RUN jupyter notebook --generate-config
+
+# Set the password (replace the hash with your own)
+RUN echo "c.NotebookApp.password = u'sha1:yourhashedpassword'" >> /root/.jupyter/jupyter_notebook_config.py
+
 # Expose the Jupyter Notebook port
 EXPOSE 10000
 
