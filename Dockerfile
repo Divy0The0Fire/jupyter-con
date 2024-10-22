@@ -8,7 +8,7 @@ WORKDIR /app
 RUN pip install --no-cache-dir notebook
 
 # Expose the Jupyter Notebook port
-EXPOSE 8888
+EXPOSE 10000
 
 # Set the command to start Jupyter Notebook
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=10000", "--no-browser", "--allow-root"]
