@@ -11,4 +11,4 @@ RUN pip install --no-cache-dir notebook
 EXPOSE 8888
 
 # Set the command to start Jupyter Notebook
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=10000", "--no-browser", "--allow-root"]
